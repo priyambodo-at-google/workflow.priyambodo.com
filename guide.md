@@ -1,5 +1,7 @@
 # Running this in Virtual Machine using npm
 
+sudo apt install nodejs npm
+
 https://docs.n8n.io/hosting/installation/npm/
 
 npm install n8n -g
