@@ -1,3 +1,19 @@
+# Running this in Virtual Machine using npm
+
+https://docs.n8n.io/hosting/installation/npm/
+npm install n8n -g
+n8n start
+npm update -g n8n
+n8n start --tunnel
+
+
+# Running this in Google Kubernetes Engine
+
+https://docs.n8n.io/hosting/installation/server-setups/google-cloud/#hosting-options
+
+
+# Running this in Virtual Machine as Docker
+
 sudo apt-get update
 
 sudo apt-get install docker.io docker-compose
