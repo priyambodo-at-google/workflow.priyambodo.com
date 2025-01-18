@@ -52,3 +52,42 @@ docker run -it --rm \
 https://fzy1lnbattbeigng6dtfblye.hooks.n8n.cloud/
 
 #======================================================================
+
+# Create Reverse Proxy from port 80 or 443 to 5678
+
+sudo apt update
+
+sudo apt install nginx
+
+sudo systemctl status nginx 
+
+sudo systemctl start nginx
+
+sudo systemctl enable nginx
+
+sudo nano /etc/nginx/nginx.conf
+
+server {
+    listen 80;
+    server_name your-domain.com;
+
+    location / {
+        proxy_pass http://localhost:5678; 
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name your-domain.com;
+    ssl_certificate /path/to/your/certificate.crt;
+    ssl_certificate_key /path/to/your/key.key;
+
+    location / {
+        proxy_pass http://localhost:5678; 
+    }
+}
+
+
+sudo systemctl restart nginx
+
+
