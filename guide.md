@@ -6,6 +6,8 @@ https://docs.n8n.io/hosting/installation/npm/
 
 npm install n8n -g
 
+export N8N_SECURE_COOKIE=false
+
 n8n start
 
 npm update -g n8n
